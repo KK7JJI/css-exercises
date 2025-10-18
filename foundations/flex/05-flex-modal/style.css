@@ -9,6 +9,7 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
+
   /* I'll give you this one for free lol */
   display: flex;
   align-items: center;
@@ -16,10 +17,29 @@ body {
 }
 
 .modal {
+  /* flex container */
+  display:flex;
+  gap: 10px;
+
+  /* box */
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 10px;
+
+}
+
+.alert-message-header {
+  /* flex container */
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert-message-body {
+  /* box */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .icon {
@@ -30,9 +50,19 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  display: flex;
+  
+  /* flex item */
+  flex-shrink: 0;
   align-items: center;
+  
+  /* flex container */
+  display: flex;  
   justify-content: center;
+}
+
+.alert-message-header-text{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .close-button {
@@ -48,6 +78,9 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+
+  /* flex child item */
+  flex-shrink: 0;
 }
 
 button {
